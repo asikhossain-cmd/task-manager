@@ -4,16 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
+    
+    <!-- Style Sheet Link -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header max-w-[100%] bg-gray-200 h-auto m-auto rounded-sm flex items-center justify-between p-4">
         <!-- Header Logo Section Start-->
         <div class="header-logo">
-            <p>Simple Task Manager</p>
+            <p class="text-2xl cursor-pointer">Simple Task Manager</p>
         </div>
+        <div class="text-2xl cursor-pointer"><i class="fa-solid fa-gear"></i></div>
         <!-- Header Logo Section End -->
     </header>
+
+    <!-- Body Section Start -->
+    
+    <!-- Body Sidebar Start-->
+    <section id="sidebar" class="body-sidebar max-w-60 bg-gray-500 h-120 flex flex-col gap-1 justify-center p-5 text-white hidden">
+        <div class="hover:bg-white hover:text-black p-2 transition duration-350 rounded-md cursor-pointer">
+            <p><i class="fa-solid fa-calendar-day mr-3"></i>Today</p>
+        </div>
+        <div class="hover:bg-white hover:text-black p-2 transition duration-350 rounded-md cursor-pointer">
+            <p><i class="fa-solid fa-clock mr-3"></i>Upcoming</p>
+        </div>
+        <div class="hover:bg-white hover:text-black p-2 transition duration-350 rounded-md cursor-pointer">
+            <p><i class="fa-regular fa-file-code mr-3"></i>Projects</p>
+        </div>
+        <div class="hover:bg-white hover:text-black p-2 transition duration-350 rounded-md cursor-pointer">
+            <p><i class="fa-solid fa-square-check mr-3"></i>Completed</p>
+        </div>
+    </section>
+    <!-- Body Sidebar -->
+
+    <!-- SideBar Button For Open Close Sidebar Start-->
+    <section id="sidebar-controller-toggle" class="sidebar-controller p-5">
+        <div><i class="fa-solid fa-arrow-right-arrow-left text-3xl cursor-pointer"></i></div>
+    </section>
+    <!-- SideBar Button For Open Close Sidebar End-->
+    
+    <!-- Body Section End -->
+     
     <script src="script.js"></script>
 </body>
 </html>
